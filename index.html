@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veronica // Emirates Edition — Wallpapers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b10; --card: #121218; --muted:#a1a1aa; --text:#e5e7eb; --ring:#2a2a35; --brand:#ef4444;
+    }
+    * {box-sizing:border-box}
+    body {margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--text)}
+    header {position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(11,11,16,.6); border-bottom:1px solid var(--ring);}
+    .wrap {max-width:1100px; margin:0 auto; padding:16px 20px}
+    h1 {font-size:18px; margin:0 0 2px}
+    .sub {color:var(--muted); font-size:13px}
+    .grid {display:grid; gap:16px; grid-template-columns:repeat(1,minmax(0,1fr)); padding:22px 20px; max-width:1100px; margin:0 auto}
+    @media(min-width:680px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:980px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .card {background:var(--card); border:1px solid var(--ring); border-radius:16px; overflow:hidden; display:flex; flex-direction:column}
+    .thumb {aspect-ratio:16/9; width:100%; object-fit:cover; display:block}
+    .pad {padding:12px}
+    .title {font-size:14px; font-weight:600; margin:0 0 8px}
+    .muted {color:var(--muted); font-size:12px}
+    .row {display:flex; gap:8px; margin-top:10px}
+    .btn {flex:1; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; border-radius:10px; border:1px solid var(--ring); color:var(--text); background:transparent; cursor:pointer; text-decoration:none}
+    .btn:hover{background:#191926}
+    .btn--brand {border-color:#7f1d1d; background:#1b0b0b}
+    .btn--brand:hover{background:#2a0f0f}
+    footer {border-top:1px solid var(--ring); margin-top:24px}
+    /* Lightbox */
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.86); display:none; place-items:center; padding:20px}
+    .lightbox.open{display:grid}
+    .viewer{max-width:95vw; max-height:85vh; border:1px solid var(--ring); border-radius:12px; background:#000}
+    .lbbar{position:absolute; top:12px; right:12px; display:flex; gap:8px}
+    .iconbtn{background:#15151e;border:1px solid var(--ring); color:var(--text); padding:8px 12px; border-radius:999px; cursor:pointer}
+    .iconbtn:hover{background:#1b1b28}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Veronica // Emirates Edition — Windows Wallpapers</h1>
+      <div class="sub">Four curated 4K 16:9 wallpapers. Click to preview, or download directly.</div>
+    </div>
+  </header>
+
+  <!--
+    How to replace images:
+    - Swap each full image (img) href/src and the download filename.
+    - Recommended size for Windows: 3840×2160 (16:9).
+  -->
+
+  <main class="grid" id="grid">
+    <!-- Card 1 -->
+    <article class="card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop" alt="Dubai Airport Sunset" />
+      <div class="pad">
+        <p class="title">Dubai Airport Sunset</p>
+        <p class="muted">3840×2160 • 16:9 • JPEG</p>
+        <div class="row">
+          <button class="btn" data-view="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=3840&auto=format&fit=crop">View</button>
+          <a class="btn btn--brand" href="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=3840&auto=format&fit=crop" download="Dubai_Airport_Sunset_3840x2160.jpg">Download</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=1200&auto=format&fit=crop" alt="Runway Blue Hour" />
+      <div class="pad">
+        <p class="title">Runway Blue Hour</p>
+        <p class="muted">3840×2160 • 16:9 • JPEG</p>
+        <div class="row">
+          <button class="btn" data-view="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=3840&auto=format&fit=crop">View</button>
+          <a class="btn btn--brand" href="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=3840&auto=format&fit=crop" download="Runway_Blue_Hour_3840x2160.jpg">Download</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Golden Winglet" />
+      <div class="pad">
+        <p class="title">Golden Winglet</p>
+        <p class="muted">3840×2160 • 16:9 • JPEG</p>
+        <div class="row">
+          <button class="btn" data-view="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=3840&auto=format&fit=crop">View</button>
+          <a class="btn btn--brand" href="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=3840&auto=format&fit=crop" download="Golden_Winglet_3840x2160.jpg">Download</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Dubai Skyline Night" />
+      <div class="pad">
+        <p class="title">Dubai Skyline Night</p>
+        <p class="muted">3840×2160 • 16:9 • JPEG</p>
+        <div class="row">
+          <button class="btn" data-view="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=3840&auto=format&fit=crop">View</button>
+          <a class="btn btn--brand" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=3840&auto=format&fit=crop" download="Dubai_Skyline_Night_3840x2160.jpg">Download</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lbbar">
+      <button class="iconbtn" id="lbClose" aria-label="Close">Close</button>
+      <a class="iconbtn" id="lbDownload" download>Download</a>
+    </div>
+    <img id="lbImg" class="viewer" alt="Wallpaper preview" />
+  </div>
+
+  <footer>
+    <div class="wrap sub">© <span id="yr"></span> Veronica // Emirates Edition — Personal wallpaper showcase. For personal use only.</div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const grid = document.getElementById('grid');
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbClose = document.getElementById('lbClose');
+    const lbDownload = document.getElementById('lbDownload');
+
+    // Delegate clicks for all View buttons
+    grid.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-view]');
+      if (!btn) return;
+      const url = btn.getAttribute('data-view');
+      lbImg.src = url;
+      lbDownload.href = url;
+      const fileName = (btn.parentElement?.querySelector('a[download]')?.getAttribute('download')) || 'wallpaper.jpg';
+      lbDownload.setAttribute('download', fileName);
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+    });
+
+    lbClose.addEventListener('click', () => {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      lbImg.removeAttribute('src');
+    });
+
+    // Close on background click or ESC
+    lb.addEventListener('click', (e) => { if (e.target === lb) lbClose.click(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('open')) lbClose.click(); });
+  </script>
+</body>
+</html>
